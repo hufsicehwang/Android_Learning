@@ -1,5 +1,6 @@
 package com.example.class_1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -12,6 +13,8 @@ class login_page : AppCompatActivity() {
         //val btnlogin : Button = findViewById(R.id.btn_login)
         btn_login.setOnClickListener {
             btn_login.setText("로그인 중 입니다.")
+            startActivity(Intent(this,MainActivity::class.java))
         }
+
     }
 }
