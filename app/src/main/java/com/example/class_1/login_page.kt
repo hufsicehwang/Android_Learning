@@ -15,6 +15,9 @@ class login_page : AppCompatActivity() {
             btn_login.setText("로그인 중 입니다.")
             startActivity(Intent(this,MainActivity::class.java))
         }
-
+        val intent = Intent(this, MainActivity::class.java)
+        intent.putExtra("HWang",7)
+        startActivity(intent)
     }
+
 }
