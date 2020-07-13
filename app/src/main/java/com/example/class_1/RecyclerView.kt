@@ -7,20 +7,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.activity.viewModels
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_recycler_view.*
 
 class RecyclerView : AppCompatActivity() {
+    val viewModel:MyViewmodel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycler_view)
         lateinit var list: ArrayList<data>
-        for(i in 0 until 10){
-            val data1 = data(""+i,""+i)
-            list.add(data1)
-        }
-        val adapter = RecyclerAdapter(list, LayoutInflater.from(this))
+        viewModel.mydata()
+
+        val adapter = RecyclerAdapter(viewModel.list, LayoutInflater.from(this))
         recyler.adapter = adapter
         recyler.layoutManager = LinearLayoutManager(this)
 
@@ -29,10 +31,7 @@ class RecyclerView : AppCompatActivity() {
 
 
 }
-class data(
-    val title:String?="",
-    val descripton:String?=""
-){}
+
 class RecyclerAdapter(
     val list: ArrayList<data>,
     val inflater: LayoutInflater
