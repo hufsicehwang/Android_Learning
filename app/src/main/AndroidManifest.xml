@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Tab_layout"></activity>
+        <activity android:name=".RecyclerView"></activity>
+        <activity android:name=".Tab_layout" />
         <activity android:name=".test" />
         <activity android:name=".test_fragment" />
         <activity android:name=".login_page">
