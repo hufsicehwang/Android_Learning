@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Tab_layout_viewPager">
-    <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:id="@+id/TabLayout1"/>
-    <androidx.viewpager.widget.ViewPager
+    tools:context=".fragment3">
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/ViewPager1"/>
+        android:text="fragment3"
+        android:textSize="50dp"
+        android:gravity="center"/>
+
 </LinearLayout>
