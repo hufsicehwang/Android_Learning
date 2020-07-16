@@ -19,7 +19,6 @@ class Tab_layout_viewPager : AppCompatActivity() {
         TabLayout1.getTabAt(0)?.setText("First")
     }
 }
-
 class pagerAdapter(fragmentManager: FragmentManager):FragmentStatePagerAdapter(fragmentManager){
     val list : ArrayList<Fragment> = ArrayList()
     override fun getItem(position: Int): Fragment {
