@@ -24,7 +24,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ID"
+        android:text="e-mail"
         android:textColor="#5c7cfa"
 
         android:textSize="35dp"/>
@@ -36,7 +36,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="아이디를 입력하십시오."/>
+            android:id="@+id/email_login"
+            android:hint="이메일를 입력하십시오."/>
 
 
     </LinearLayout>
@@ -56,6 +57,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/password_login"
             android:hint="비밀번호를 입력하십시오."/>
 
 

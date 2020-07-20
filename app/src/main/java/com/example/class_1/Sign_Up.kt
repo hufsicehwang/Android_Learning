@@ -1,5 +1,6 @@
 package com.example.class_1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -20,7 +21,8 @@ class Sign_Up : AppCompatActivity() {
             if (email.text.toString().length <= 0 || password.text.toString().length <= 0) {
                 Toast.makeText(this, "이메일과 패스워드를 기입해 주세요.", Toast.LENGTH_LONG).show()
             } else {
-                auth.createUserWithEmailAndPassword(email.text.toString(), password.text.toString())
+                auth.createUserWithEmailAndPassword(email.text.toString(), password.text.
+                toString())
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             // Sign in success, update UI with the signed-in user's information
@@ -28,6 +30,7 @@ class Sign_Up : AppCompatActivity() {
                             val user = auth.currentUser
                             //updateUI(user)
                         } else {
+                            startActivity(Intent(this, login_page::class.java))
                             // If sign in fails, display a message to the user.
 
                         }
